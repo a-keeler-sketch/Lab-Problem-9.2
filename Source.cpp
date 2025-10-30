@@ -39,6 +39,8 @@ int main(void) {
     if (hasAdjecentDuplicates(array, SIZE_OF_ARRAY) == true) cout << "The data has adjacent duplicates" << endl;
     else cout << "The data doesn't have adjacent duplicates" << endl;
     
+    if (hasDuplicates(array, SIZE_OF_ARRAY) == true) cout << "The data has duplicates" << endl;
+    else cout << "The data doesn't have any duplicates" << endl;
 
 
 
@@ -75,4 +77,17 @@ bool hasAdjecentDuplicates(int values[], int size) {
     return false;
 
 }
+bool hasDuplicates(int values[], int size) {
+    for (int i = 0; i < size-1; i++) {
+ 
+        for (int j = 2; j < size; j++) {
+            if (values[i] == values[j]) return true;
+            
+        }
+    }
+        
+    
+    return false;
+}
+
 
