@@ -80,7 +80,7 @@ bool hasAdjecentDuplicates(int values[], int size) {
 bool hasDuplicates(int values[], int size) {
     for (int i = 0; i < size-1; i++) {
  
-        for (int j = 2; j < size; j++) {
+        for (int j = i+1; j < size; j++) {
             if (values[i] == values[j]) return true;
             
         }
