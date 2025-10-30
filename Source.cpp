@@ -30,9 +30,11 @@ int main(void) {
 
     }
 
-    if (isSortedIncreasing(array, SIZE_OF_ARRAY) == true) cout << "The data are increasing";
-    else cout << "The data are not increasing";
-  
+    if (isSortedIncreasing(array, SIZE_OF_ARRAY) == true) cout << "The data are increasing" << endl;
+    else cout << "The data are not increasing" << endl;
+
+    if (isSortedDecreasing(array, SIZE_OF_ARRAY) == true) cout << "The data are decreasing" << endl;
+    else cout << "The data are not decreasing" << endl;
 
     
 
@@ -52,6 +54,14 @@ bool isSortedIncreasing(int values[], int size) {
     for (int i = 1; i < size; i++) {
         if (values[i] < values[i - 1]) return false;
        
+    }
+    return true;
+}
+bool isSortedDecreasing(int values[], int size) {
+
+    for (int i = 1; i < size; i++) {
+        if (values[i] > values[i - 1]) return false;
+
     }
     return true;
 }
